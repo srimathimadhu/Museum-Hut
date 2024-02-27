@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Museum Hut</title>
+    <link rel="icon" type="image/x-icon" href="/public/assets/images/Museum image/Museum.png">
+    <link rel="stylesheet" href="./assets/vendors/animate.css/animate.min.css">
+    <link rel="stylesheet" href="./assets/vendors/slick-carousel/slick.css">
+    <link rel="stylesheet" href="./assets/vendors/slick-carousel/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/vendors/jquery/jquery.min.js"></script>
+    <script src="assets/js/loader.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js" ></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyD3nBWAUJoJsGMgo6yQRG5caWgMjWfaKC4",
+    authDomain: "museum-hut.firebaseapp.com",
+    projectId: "museum-hut",
+    storageBucket: "museum-hut.appspot.com",
+    messagingSenderId: "763492303183",
+    appId: "1:763492303183:web:30b7615ce9e58679f2053a",
+    measurementId: "G-M6R71PJD2C"
+
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="app.js" defer></script>
+  
+</head>
+
+<body>
+    <div class="oleez-loader"></div>
+    <header class="oleez-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html"><img src="assets/images/Museum image/Museum Mini Logo.png" alt="Oleez"></a>
+            <ul class="nav nav-actions d-lg-none ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#!" data-toggle="searchModal">
+                        <img src="assets/images/search.svg" alt="search">
+                    </a>
+                </li>
+            </ul>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#oleezMainNav"
+                aria-controls="oleezMainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="oleezMainNav">
+                <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Museum List.html">Top Museums</a>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav d-none d-lg-flex">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-btn" href="#!" data-toggle="searchModal">
+                            <img src="assets/images/search.svg" alt="search">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="container wow fadeIn">
+                <div id="oleezLandingCarousel" class="oleez-landing-carousel carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img src="./assets/images/Museum image/M13.jpg" alt="First slide" class="w-100">
+                            <div class="carousel-caption">
+                                <h2 data-animation="animated fadeInRight"><span>To Travel </span></h2>
+                                <h2 data-animation="animated fadeInRight"><span>Is To Live</span></h2>
+                                <a href="Museum List.html" class="carousel-item-link" data-animation="animated fadeInRight">Book Now</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/images/Museum image/M4.jpg" alt="Second slide" class="w-100">
+                            <div class="carousel-caption">
+                                <h2 data-animation="animated fadeInRight"><span>The Places</span></h2>
+                                <h2 data-animation="animated fadeInRight"><span>You'll Go</span></h2>
+                                <a href="Museum List.html" class="carousel-item-link" data-animation="animated fadeInRight">Book Now</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/images/Museum image/M3.jpg" alt="Third slide" class="w-100">
+                            <div class="carousel-caption">
+                                <h2 data-animation="animated fadeInRight"><span>Adventure Is</span></h2>
+                                <h2 data-animation="animated fadeInRight"><span>Worthwhile</span></h2>
+                                <a href="Museum List.html" class="carousel-item-link" data-animation="animated fadeInRight">Book Now</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/images/Museum image/M5.jpg" alt="Fourth slide" class="w-100">
+                            <div class="carousel-caption">
+                                <h2 data-animation="animated fadeInRight"><span>Aspire To Inspire </span></h2>
+                                <h2 data-animation="animated fadeInRight"><span>Before We Expire</span></h2>
+                                <a href="Museum List.html" class="carousel-item-link" data-animation="animated fadeInRight">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="oleez-landing-section oleez-landing-section-about">
+            <div class="container">
+                <div class="oleez-landing-section-content">
+                    <div class="oleez-landing-section-verticals wow fadeIn">
+                        <span class="number">01</span> <img src="assets/images/Museum image/Museum_Mini_Logo-removebg-preview.png" alt="museum-hut" height="20px">
+                    </div>
+                    <div class="row landing-about-content wow fadeInUp">
+                        <div class="col-md-6">
+                            <h2>A museum is a place where one should lose one’s head.</h2>
+                        </div>
+                        <div class="col-md-6">
+                            <p>That’s why we have the Museum, Matty, to remind us of how we came, and why: to start fresh, and begin a new place from what we had learned and carried from the old.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="oleez-landing-section oleez-landing-section-projects">
+            <div class="container">
+                <div class="oleez-landing-section-content">
+                    <div class="oleez-landing-section-verticals wow fadeIn">
+                        <span class="number">02</span> <img src="assets/images/Museum image/Museum_Mini_Logo-removebg-preview.png" alt="museum-hut" height="20px">
+                    </div>
+                    <h2 class="section-title wow fadeInUp">Gallery <a href="#!" class="all-projects-link">.</a></h2>
+                    <div class="landing-projects-carousel wow fadeIn">
+                        <div class="card landing-project-card">
+                            <img src="assets/images/Museum image/M9.jpg" class="card-img" alt="Project 1">
+                            <div class="card-img-overlay">
+                                <h6 class="project-category">Albert Hall Museum,</h6>
+                                <h5 class="project-title">Jaipur</h5>
+                            </div>
+                        </div>
+                        <div class="card landing-project-card">
+                            <img src="assets/images/Museum image/M10.jpg" class="card-img" alt="Project 1">
+                            <div class="card-img-overlay">
+                                <h6 class="project-category">Museum In Nagarjunakonda,</h6>
+                                <h5 class="project-title">Andhra Pradesh</h5>
+                            </div>
+                        </div>
+                        <div class="card landing-project-card">
+                            <img src="assets/images/Museum image/M11.jpg" class="card-img" alt="Project 1">
+                            <div class="card-img-overlay">
+                                <h6 class="project-category">Chhatrapati Shivaji Vastu Museum,</h6>
+                                <h5 class="project-title">Mumbai</h5>
+                            </div>
+                        </div>
+                        <div class="card landing-project-card">
+                            <img src="assets/images/Museum image/M12.jpg" class="card-img" alt="Project 1">
+                            <div class="card-img-overlay">
+                                <h6 class="project-category">Napier Museum</h6>
+                                <h5 class="project-title">Thiruvananthapuram</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slick-navbtn-wrapper"></div>
+                </div>
+            </div>
+        </section>
+        <section class="oleez-landing-section oleez-landing-section-team">
+            <div class="container">
+                <div class="oleez-landing-section-content">
+                    <div class="oleez-landing-section-verticals wow fadeIn">
+                        <span class="number">03</span> <img src="assets/images/Museum image/Museum_Mini_Logo-removebg-preview.png" alt="museum-hut" height="20px">
+                    </div>
+                    <div class="row landing-team-content wow fadeInUp">
+                        <div class="col-md-6">
+                            <h2 class="section-title">Step By Step <br> E-Ticket Booking</h2>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Book Ticket Online - Make India More Smart</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-5 mb-md-0 landing-team-card wow flipInY">
+                            <img src="assets/images/Museum image/Select.jpg" alt="Team Member" class="team-card-img">
+                            <h5 class="team-card-name">Select Museum</h5>
+                            <p class="team-card-job">STEP 1</p>
+                           
+                        </div>
+                        <div class="col-md-4 mb-5 mb-md-0 landing-team-card wow flipInY">
+                                <img src="assets/images/Museum image/Payment.jpg" alt="Team Member" class="team-card-img">
+                                <h5 class="team-card-name">Make Payment</h5>
+                                <p class="team-card-job">STEP 2</p>
+                                
+                        </div>
+                        <div class="col-md-4 mb-5 mb-md-0 landing-team-card wow flipInY">
+                                <img src="assets/images/Museum image/enjoy 3.png" alt="Team Member" class="team-card-img">
+                                <h5 class="team-card-name">Enjoy Your Vision</h5>
+                                <p class="team-card-job">STEP 3</p>
+                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="oleez-landing-section oleez-landing-section-client">
+            <div class="container">
+                <div class="oleez-landing-section-content">
+                    <div class="oleez-landing-section-verticals wow fadeIn">
+                        <span class="number">04</span> <img src="assets/images/Museum image/Museum_Mini_Logo-removebg-preview.png" alt="museum-hut" height="20px">
+                    </div>
+                    <h2 class="section-title mb-1 wow fadeInUp">A museum has to renew its collection to be alive, but that does not mean we give on important old works.</h2>
+            
+                </div>
+            </div>
+        </section>
+        <section class="oleez-landing-section oleez-landing-section-news">
+            <div class="container">
+                <div class="oleez-landing-section-content">
+                    <div class="oleez-landing-section-verticals wow fadeIn">
+                        <span class="number">05</span> <img src="assets/images/Museum image/Museum_Mini_Logo-removebg-preview.png" alt="museum-hut" height="20px">
+                    </div>
+                    <h2 class="section-title wow fadeInUp">Top Museums.</h2>
+                    <p class="news-section-subtitle wow fadeInUp">Explore More - Learn More.</p>
+                    <div class="row">
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <div class="news-card news-card-1 wow fadeInUp">
+                                <div class="card-body">
+                                    
+                                    <div class="post-meta">
+                                        <span class="post-category">Delhi</span> 
+                                    </div>
+                                    <h5 class="post-title">Natioanl Museum</h5>
+                                    <a href="National Museum Delhi.html" class="post-permalink">Book Now </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <div class="news-card news-card-2 wow fadeInUp">
+                                <div class="card-body">
+                                    
+                                    <div class="post-meta">
+                                        <span class="post-category">Kolkata</span>
+                                    </div>
+                                    <h5 class="post-title">Indian Museum</h5>
+                                    <a href="National Museum Delhi.html" class="post-permalink">Book Now </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <div class="news-card news-card-3 wow fadeInUp">
+                                <div class="card-body">                                   
+                                    <div class="post-meta">
+                                        <span class="post-category">Chennai</span>
+                                    </div>
+                                    <h5 class="post-title">Government Museum</h5>
+                                    <a href="National Museum Delhi.html" class="post-permalink">Book Now </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="oleez-landing-section oleez-landing-section-testimonials">
+            <div class="container">
+                <div class="oleez-landing-section-content">
+                    <div class="oleez-landing-section-verticals wow fadeIn">
+                        <span class="number">06</span> <img src="assets/images/Museum image/Museum_Mini_Logo-removebg-preview.png" alt="museum-hut" height="20px">
+                    </div>
+                    <div class="d-md-flex justify-content-between wow fadeInUp">
+                        <div class="testimonial-section-content">
+                            <h2 class="section-title">Team</h2>
+                            <p class="section-subtitle">We Twice</p>
+                        </div>
+                        <div class="testimonial-carousel-navbtn-wrapper"></div>
+                    </div>
+                    <div class="landing-testimonial-carousel wow fadeInUp">
+                        <div class="landing-testimonial-card">
+                            <div class="media">
+                                <img src="assets/images/Client_1@2x.jpg" alt="client" class="testimonial-card-img">
+                                <div class="media-body">
+                                    <h6 class="testimonial-card-name">  </h6>
+                                    <h6 class="testimonial-card-name">Srimathi</h6>
+                                    <p class="testimonial-card-company">Backend Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="landing-testimonial-card">
+                            <div class="media">
+                                <img src="assets/images/Client_2@2x.jpg" alt="client" class="testimonial-card-img">
+                                <div class="media-body">
+                                    <h6 class="testimonial-card-name">  </h6>
+                                    <h6 class="testimonial-card-name">Sathya Priya</h6>
+                                    <p class="testimonial-card-company">Backend Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="landing-testimonial-card">
+                            <div class="media">
+                                <img src="assets/images/Moni.jpg" alt="client" class="testimonial-card-img">
+                                <div class="media-body">
+                                    <h6 class="testimonial-card-name">  </h6>
+                                    <h6 class="testimonial-card-name">Monishwaran</h6>
+                                    <p class="testimonial-card-company">Full Stack Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="landing-testimonial-card">
+                            <div class="media">
+                                <img src="assets/images/Client_4@2x.jpg" alt="client" class="testimonial-card-img">
+                                <div class="media-body">
+                                    <h6 class="testimonial-card-name">  </h6>
+                                    <h6 class="testimonial-card-name">Prasanth</h6>
+                                    <p class="testimonial-card-company">Frontend Developer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="landing-testimonial-card">
+                            <div class="media">
+                                <img src="assets/images/karamath.jpg" alt="client" class="testimonial-card-img">
+                                <div class="media-body">
+                                    <h6 class="testimonial-card-name">  </h6>
+                                    <h6 class="testimonial-card-name">Karamath</h6>
+                                    <p class="testimonial-card-company">Frontend Developer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="landing-testimonial-card">
+                            <div class="media">
+                                <img src="assets/images/Praburam.jpg" alt="client" class="testimonial-card-img">
+                                <div class="media-body">
+                                    <h6 class="testimonial-card-name">  </h6>
+                                    <h6 class="testimonial-card-name">Praburam</h6>
+                                    <p class="testimonial-card-company">Frontend Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="oleez-footer wow fadeInUp">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="assets/images/Museum image/Museum logo black 2.png" alt="oleez" class="footer-logo" height="100px"> 
+                        <p class="footer-intro-text">One's destination is never a place, but a new way of seeing things!</p>
+                        <nav class="footer-social-links">
+                            <a href="#!">Fb</a>
+                            <a href="#!">Tw</a>
+                            <a href="#!">In</a>
+                            <a href="#!">Be</a>
+                        </nav>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-6 footer-widget-text">
+                                <h6 class="widget-title">PHONE</h6>
+                                <p class="widget-content">+91 99999999</p>
+                            </div>
+                            <div class="col-md-6 footer-widget-text">
+                                <h6 class="widget-title">ENQUIRUES</h6>
+                                <p class="widget-content">WEE TWICE Team B.Tech IT</p>
+                            </div>
+                            <div class="col-md-6 footer-widget-text">
+                                <h6 class="widget-title">ADDRESS</h6>
+                                <p class="widget-content">KSR EDUCATION INSTITUTION <br> Tiruchengode</p>
+                            </div>
+                            <div class="col-md-6 footer-widget-text">
+                                <h6 class="widget-title">WORK HOURS</h6>
+                                <p class="widget-content">Weekdays: 09:00 - 18:00 <br> Weekends: 11:00 - 17:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-text">
+                <p class="mb-md-0">©  2020, Museum Hut. Made with Love by <a href="https://www.weetwice.com" target="_blank" rel="noopener noreferrer" class="text-reset">Wee Twice</a>.</p>
+                <p class="mb-0">All right reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Off canvas social menu -->
+    <nav id="offCanvasMenu" class="off-canvas-menu">
+        <button type="button" class="close" aria-label="Close" data-dismiss="offCanvasMenu">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <ul class="oleez-social-menu">
+            <li>
+                <a href="#!" class="oleez-social-menu-link">Facebook</a>
+            </li>
+            <li>
+                <a href="#!" class="oleez-social-menu-link">Instagram</a>
+            </li>
+            <li>
+                <a href="#!" class="oleez-social-menu-link">Behance</a>
+            </li>
+            <li>
+                <a href="#!" class="oleez-social-menu-link">Dribbble</a>
+            </li>
+            <li>
+                <a href="#!" class="oleez-social-menu-link">Email</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Full screen search box -->
+    <div id="searchModal" class="search-modal">
+        <button type="button" class="close" aria-label="Close" data-dismiss="searchModal">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <form action="index.html" method="get" class="oleez-overlay-search-form">
+            <label for="search" class="sr-only">Search</label>
+            <input type="search" class="oleez-overlay-search-input" id="search" name="search" placeholder="Search here">
+        </form>
+    </div>
+    <script src="assets/vendors/popper.js/popper.min.js"></script>
+    <script src="assets/vendors/wowjs/wow.min.js"></script>
+    <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/vendors/slick-carousel/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/landing.js"></script>
+    <script>
+        new WOW({mobile: false}).init();
+    </script>
+</body>
+
+
+</html>
